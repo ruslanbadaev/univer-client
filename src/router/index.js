@@ -24,8 +24,11 @@ const routes = [
     component: () => import('@/views/common/Auth')
   },
   {
-    path: '/edu/:route',
-    name: 'edu',
+/*     path: '/edu/:route',
+    name: 'edu', */
+
+    path: '/sveden/:route',
+    name: 'sveden',
     component: () => import('@/views/common/Edu')
   },
   {

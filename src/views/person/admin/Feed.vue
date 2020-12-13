@@ -125,8 +125,10 @@ export default {
     },
     setBlobImage () {
       this.images.forEach((image, index) => {
+
         const src = URL.createObjectURL(image)
         image.preview = src
+        
       })
     },
     onDeleteImage (index) {

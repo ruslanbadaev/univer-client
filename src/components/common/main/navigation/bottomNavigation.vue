@@ -26,7 +26,7 @@ export default {
       },
       {
         title: 'О нас',
-        path: '/edu/about',
+        path: '/sveden/about',
         icon: 'access-point'
       }]
     }

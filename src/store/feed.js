@@ -10,7 +10,8 @@ class Feed {
     this.fullText = fullText
     this.images = []
     images.forEach(image => {
-      this.images.push(`${process.env.VUE_APP_SERVER}/img/news/${image}`)
+      //console.log(image);
+      this.images.push(`${process.env.VUE_APP_SERVER}/uploads/${image.filename}`)
     })
   }
 }
@@ -33,6 +34,7 @@ export default {
       commit('setLoading', true)
       try {
         const response = await server.get('news/all')
+        //console.log(response.data.result);
         commit('setFeed', response.data.result)
         commit('sharedFeed')
         commit('setLoading', false)
