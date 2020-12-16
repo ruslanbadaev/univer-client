@@ -70,8 +70,12 @@ export default {
         path: '/feed'
       },
       {
+        title: 'Расписание',
+        path: '/sveden/schedule'
+      },
+      {
         title: 'Основные сведения',
-        path: '/edu/about'
+        path: '/sveden/about'
       }]
     }
   },

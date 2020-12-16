@@ -25,6 +25,11 @@ export default {
         icon: 'newspaper-variant-outline'
       },
       {
+        title: 'Расписание',
+        path: '/sveden/schedule',
+        icon: 'newspaper-variant-outline'
+      },
+      {
         title: 'О нас',
         path: '/sveden/about',
         icon: 'access-point'
