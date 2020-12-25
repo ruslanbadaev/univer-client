@@ -14,6 +14,15 @@ export default {
     'faculty-general': () => import('@/components/common/edu/structure_SKF/FacultyGeneral'),
     about: () => import('@/components/common/sveden/About'),
     schedule: () => import('@/components/common/sveden/Schedule'),
+
+    museum: () => import('@/components/common/sveden/HTMLRender'),
+    archive: () => import('@/components/common/sveden/HTMLRender'),
+    job: () => import('@/components/common/sveden/HTMLRender'),
+    sitemap: () => import('@/components/common/sveden/HTMLRender'),
+    phonebook: () => import('@/components/common/sveden/HTMLRender'),
+    video: () => import('@/components/common/sveden/HTMLRender'),
+    virtour: () => import('@/components/common/sveden/HTMLRender'),
+
     lecturers: () => import('@/components/common/edu/Lecturers'),
     docs: () => import('@/components/common/edu/Docs'),
     rulers: () => import('@/components/common/edu/structure_SKF/Rulers'),
