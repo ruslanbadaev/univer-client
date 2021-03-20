@@ -635,8 +635,8 @@ export default [
   {
     title: 'Вакантные места для приема (перевода)',
     path: {
-      name: '404',
-      params: ''
+      name: 'vacant', /* aaa */
+      params: 'vacant'
     },
     icon: 'arrow-decision-outline',
     hasSubmenu: false
@@ -644,8 +644,8 @@ export default [
   {
     title: 'Доступная среда',
     path: {
-      name: '404',
-      params: ''
+      name: 'ovz', /* aaa */
+      params: 'ovz'
     },
     icon: 'share',
     hasSubmenu: false
@@ -653,8 +653,8 @@ export default [
   {
     title: 'Международное сотрудничество',
     path: {
-      name: '404',
-      params: ''
+      name: 'inter', /* aaa */
+      params: 'inter'
     },
     icon: 'earth',
     hasSubmenu: false

@@ -10,7 +10,7 @@ export default [{
                 title: 'Нормы учебного времени на 2020/2021',
                 path: {
                     name: 'sveden',
-                    params: 'norms'
+                    params: 'edu_norms' /* bbb - */
                 },
                 icon: '',
                 hasSubmenu: false
@@ -19,7 +19,7 @@ export default [{
                 title: 'Расписание занятий',
                 path: {
                     name: 'sveden',
-                    params: ''
+                    params: 'edu_sched' /* bbb - */
                 },
                 icon: '',
                 hasSubmenu: false
@@ -28,7 +28,7 @@ export default [{
                 title: 'Электронная информационно-образовательная среда',
                 path: {
                     name: 'sveden',
-                    params: ''
+                    params: 'edu_elarea'
                 },
                 icon: '',
                 hasSubmenu: true,
@@ -36,7 +36,7 @@ export default [{
                         title: 'Методические материалы',
                         path: {
                             name: 'sveden',
-                            params: ''
+                            params: 'edu_meth' /* bbb - */
                         },
                         icon: '',
                         hasSubmenu: false
@@ -45,7 +45,7 @@ export default [{
                         title: 'Внешние электронные информационные ресурсы',
                         path: {
                             name: 'sveden',
-                            params: ''
+                            params: 'edu_inres' /* bbb - */
                         },
                         icon: '',
                         hasSubmenu: false
@@ -65,7 +65,7 @@ export default [{
                 title: 'План выпуска учебных, научных и методических изданий СКФ МТУСИ',
                 path: {
                     name: 'sveden',
-                    params: ''
+                    params: 'edu_sched_meth' /* bbb - */
                 },
                 icon: '',
                 hasSubmenu: false
@@ -74,7 +74,7 @@ export default [{
                 title: 'Титульные листы для оформления контрольных работ, курсовых работ и проектов',
                 path: {
                     name: 'sveden',
-                    params: ''
+                    params: 'edu_titul' /* bbb - */
                 },
                 icon: '',
                 hasSubmenu: false
@@ -93,7 +93,7 @@ export default [{
                 title: 'Цели и основные направления',
                 path: {
                     name: 'sveden',
-                    params: ''
+                    params: 'science_obj' /* bbb - */
                 },
                 icon: '',
                 hasSubmenu: false
@@ -102,7 +102,7 @@ export default [{
                 title: 'Основные руководящие документы',
                 path: {
                     name: 'sveden',
-                    params: ''
+                    params: 'science_docs' /* bbb - */
                 },
                 icon: '',
                 hasSubmenu: false
@@ -111,7 +111,7 @@ export default [{
                 title: 'Организация, планирование и руководство научной работой',
                 path: {
                     name: 'sveden',
-                    params: ''
+                    params: 'science_work' /* bbb - */
                 },
                 icon: '',
                 hasSubmenu: false
@@ -120,7 +120,7 @@ export default [{
                 title: 'Международная научно-техническая конференция',
                 path: {
                     name: 'sveden',
-                    params: ''
+                    params: 'science_int' /* bbb - */
                 },
                 icon: '',
                 hasSubmenu: false
@@ -129,7 +129,7 @@ export default [{
                 title: 'Результаты научно-исследовательской деятельности',
                 path: {
                     name: 'sveden',
-                    params: ''
+                    params: 'science_res' /* bbb - */
                 },
                 icon: '',
                 hasSubmenu: false
@@ -138,7 +138,7 @@ export default [{
                 title: 'Олимпиады',
                 path: {
                     name: 'sveden',
-                    params: ''
+                    params: 'science_olimp' /* bbb - */
                 },
                 icon: '',
                 hasSubmenu: false
@@ -147,7 +147,7 @@ export default [{
                 title: 'Научно-технические сборы',
                 path: {
                     name: 'sveden',
-                    params: ''
+                    params: 'science_meeting' /* bbb - */
                 },
                 icon: '',
                 hasSubmenu: false
@@ -156,7 +156,7 @@ export default [{
                 title: 'Перечень инновационных разработок',
                 path: {
                     name: 'sveden',
-                    params: ''
+                    params: 'science_proj' /* bbb - */
                 },
                 icon: '',
                 hasSubmenu: false
@@ -165,7 +165,7 @@ export default [{
                 title: 'Перечень изданных статей профессорско-преподавательского состава СКФ МТУСИ в изданиях, рекомендуемых ВАК',
                 path: {
                     name: 'sveden',
-                    params: ''
+                    params: 'science_paper' /* bbb - */
                 },
                 icon: '',
                 hasSubmenu: false
@@ -174,7 +174,7 @@ export default [{
                 title: 'Перечень свидетельств о регистрации программ и патентов, полученных на разработки',
                 path: {
                     name: 'sveden',
-                    params: ''
+                    params: 'science_reg' /* bbb - */
                 },
                 icon: '',
                 hasSubmenu: false
@@ -183,7 +183,7 @@ export default [{
                 title: 'Ресурсы для осуществления научно-исследовательской деятельности',
                 path: {
                     name: 'sveden',
-                    params: ''
+                    params: 'science_res' /* bbb - */
                 },
                 icon: '',
                 hasSubmenu: false
@@ -202,7 +202,7 @@ export default [{
                 title: 'План и расписание работы',
                 path: {
                     name: 'sveden',
-                    params: ''
+                    params: 'educational_schw' /* bbb - */
                 },
                 icon: '',
                 hasSubmenu: false
@@ -210,8 +210,8 @@ export default [{
             {
                 title: 'Студенческая газета "Спектр"',
                 path: {
-                    name: 'sveden',
-                    params: ''
+                    name: 'sveden', 
+                    params: 'educational_spektr' /* bbb - */
                 },
                 icon: '',
                 hasSubmenu: false
@@ -220,7 +220,7 @@ export default [{
                 title: 'Деятельность студенческих организаций',
                 path: {
                     name: 'sveden',
-                    params: ''
+                    params: 'educational_studo' /* bbb - */
                 },
                 icon: '',
                 hasSubmenu: false
@@ -231,7 +231,7 @@ export default [{
         title: 'Объявление о вакансиях',
         path: {
             name: 'sveden',
-            params: ''
+            params: 'job_adv' /* bbb - */
         },
         icon: '',
         hasSubmenu: false
@@ -245,10 +245,10 @@ export default [{
         icon: '',
         hasSubmenu: true,
         submenu: [{
-                title: 'Правила приема',
+                title: 'Правила приема', /* bbb - */
                 path: {
                     name: 'sveden',
-                    params: ''
+                    params: 'abitur_pp'
                 },
                 icon: '',
                 hasSubmenu: false
@@ -257,7 +257,7 @@ export default [{
                 title: 'Стоимость обучения',
                 path: {
                     name: 'sveden',
-                    params: ''
+                    params: 'abitur_stoim' /* bbb - */
                 },
                 icon: '',
                 hasSubmenu: false
@@ -266,7 +266,7 @@ export default [{
                 title: 'Документы',
                 path: {
                     name: 'sveden',
-                    params: ''
+                    params: 'abitur_docs' /* bbb - */
                 },
                 icon: '',
                 hasSubmenu: false
@@ -275,16 +275,7 @@ export default [{
                 title: 'Приемная комиссия',
                 path: {
                     name: 'sveden',
-                    params: ''
-                },
-                icon: '',
-                hasSubmenu: false
-            },
-            {
-                title: 'Приемная комиссия',
-                path: {
-                    name: 'sveden',
-                    params: ''
+                    params: 'abitur_pk' /* bbb - */
                 },
                 icon: '',
                 hasSubmenu: false
@@ -293,7 +284,7 @@ export default [{
                 title: 'Дни открытых дверей',
                 path: {
                     name: 'sveden',
-                    params: ''
+                    params: 'abitur_od' /* bbb - */
                 },
                 icon: '',
                 hasSubmenu: false
@@ -302,7 +293,7 @@ export default [{
                 title: 'Очная форма обучения',
                 path: {
                     name: 'sveden',
-                    params: ''
+                    params: 'abitur_ofo' /* bbb - */
                 },
                 icon: '',
                 hasSubmenu: false
@@ -311,7 +302,7 @@ export default [{
                 title: 'Заочная форма обучения',
                 path: {
                     name: 'sveden',
-                    params: ''
+                    params: 'abitur_zfo' /* bbb - */
                 },
                 icon: '',
                 hasSubmenu: false
@@ -320,7 +311,7 @@ export default [{
                 title: 'Вопрос в приемную комиссию',
                 path: {
                     name: 'sveden',
-                    params: ''
+                    params: 'abitur_qpp' /* bbb - */
                 },
                 icon: '',
                 hasSubmenu: false
@@ -329,7 +320,7 @@ export default [{
                 title: 'Подготовительные курсы',
                 path: {
                     name: 'sveden',
-                    params: ''
+                    params: 'abitur_pkr' /* bbb - */
                 },
                 icon: '',
                 hasSubmenu: false
@@ -348,7 +339,7 @@ export default [{
                 title: 'График плановых консультаций преподавателей',
                 path: {
                     name: 'sveden',
-                    params: ''
+                    params: 'graph' /* bbb - */
                 },
                 icon: '',
                 hasSubmenu: false
@@ -357,7 +348,7 @@ export default [{
                 title: 'Работа',
                 path: {
                     name: 'sveden',
-                    params: ''
+                    params: 'stud_job' /* bbb - */
                 },
                 icon: '',
                 hasSubmenu: false
@@ -366,7 +357,7 @@ export default [{
                 title: 'Модульно-рейтинговая система',
                 path: {
                     name: 'sveden',
-                    params: ''
+                    params: 'stud_mrs' /* bbb - */
                 },
                 icon: '',
                 hasSubmenu: false
@@ -375,7 +366,7 @@ export default [{
                 title: 'Электронное портфолио студента',
                 path: {
                     name: 'sveden',
-                    params: ''
+                    params: 'stud_portfolio' /* bbb - */
                 },
                 icon: '',
                 hasSubmenu: false
@@ -384,7 +375,7 @@ export default [{
                 title: 'МУ по подготовке ВКР',
                 path: {
                     name: 'sveden',
-                    params: ''
+                    params: 'mu_all' /* bbb - */
                 },
                 icon: '',
                 hasSubmenu: false
@@ -403,7 +394,7 @@ export default [{
                 title: 'Нормативно-правовые и иные акты в сфере противодействия коррупции',
                 path: {
                     name: 'sveden',
-                    params: ''
+                    params: 'acts' /* aaa - */
                 },
                 icon: '',
                 hasSubmenu: false
@@ -412,7 +403,7 @@ export default [{
                 title: 'Антикоррупционная экспертиза',
                 path: {
                     name: 'sveden',
-                    params: ''
+                    params: 'exp' /* aaa - */
                 },
                 icon: '',
                 hasSubmenu: false
@@ -421,7 +412,7 @@ export default [{
                 title: 'Методические материалы',
                 path: {
                     name: 'sveden',
-                    params: ''
+                    params: 'metodic' /* aaa - */
                 },
                 icon: '',
                 hasSubmenu: false
@@ -430,7 +421,7 @@ export default [{
                 title: 'Формы документов, связанных с противодействием коррупции, для заполнения',
                 path: {
                     name: 'sveden',
-                    params: ''
+                    params: 'doc_form' /* aaa - */
                 },
                 icon: '',
                 hasSubmenu: false
@@ -439,7 +430,7 @@ export default [{
                 title: 'Сведения о доходах, расходах, об имуществе и обязательствах имущественного характера',
                 path: {
                     name: 'sveden',
-                    params: ''
+                    params: 'income' /* aaa - */
                 },
                 icon: '',
                 hasSubmenu: false
@@ -448,7 +439,7 @@ export default [{
                 title: 'Комиссия по соблюдению требований к служебному поведению и урегулироваанию конфликта интересов',
                 path: {
                     name: 'sveden',
-                    params: ''
+                    params: 'comission' /* aaa - */
                 },
                 icon: '',
                 hasSubmenu: false
@@ -457,7 +448,7 @@ export default [{
                 title: 'Обратная связь для сообщения о фактах коррупции',
                 path: {
                     name: 'sveden',
-                    params: ''
+                    params: 'callback' /* aaa - */
                 },
                 icon: '',
                 hasSubmenu: false
@@ -485,7 +476,7 @@ export default [{
             title: 'Члены клуба выпускников',
             path: {
                 name: 'sveden',
-                params: ''
+                params: 'graduate' /* bbb - */
             },
             icon: '',
             hasSubmenu: false
