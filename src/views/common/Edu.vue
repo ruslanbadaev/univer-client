@@ -22,6 +22,13 @@ export default {
     phonebook: () => import('@/components/common/sveden/HTMLRender'),
     video: () => import('@/components/common/sveden/HTMLRender'),
     virtour: () => import('@/components/common/sveden/HTMLRender'),
+
+    norms: () => import('@/components/common/sveden/HTMLRender'),
+    ofo: () => import('@/components/common/sveden/HTMLRender'),
+    zfo: () => import('@/components/common/sveden/HTMLRender'),
+    opendays: () => import('@/components/common/sveden/HTMLRender'),
+    commission: () => import('@/components/common/sveden/HTMLRender'),
+    abitur: () => import('@/components/common/sveden/HTMLRender'),
     
     
     /* aaa */

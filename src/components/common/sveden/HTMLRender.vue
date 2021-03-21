@@ -29,7 +29,7 @@ export default {
   created: function(){
     axios
   .get(`${process.env.VUE_APP_SERVER}/render?route=${this.$route.params.route}`)
-  .then(response => (this.html = response.data[0].data));
+  .then(response => (this.html = response.data[0].data.replace(/\\n/g, '<br>')));
     console.log(this.$route.params.route)
   }
 };

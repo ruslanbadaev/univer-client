@@ -10,7 +10,7 @@ export default [{
                 title: 'Нормы учебного времени на 2020/2021',
                 path: {
                     name: 'sveden',
-                    params: 'edu_norms' /* bbb - */
+                    params: 'norms' /* bbb - */
                 },
                 icon: '',
                 hasSubmenu: false
@@ -240,7 +240,7 @@ export default [{
         title: 'Абитуриенту',
         path: {
             name: 'sveden',
-            params: ''
+            params: 'abitur'
         },
         icon: '',
         hasSubmenu: true,
@@ -275,7 +275,7 @@ export default [{
                 title: 'Приемная комиссия',
                 path: {
                     name: 'sveden',
-                    params: 'abitur_pk' /* bbb - */
+                    params: 'commission' /* bbb - */
                 },
                 icon: '',
                 hasSubmenu: false
@@ -284,7 +284,7 @@ export default [{
                 title: 'Дни открытых дверей',
                 path: {
                     name: 'sveden',
-                    params: 'abitur_od' /* bbb - */
+                    params: 'opendays' /* bbb - */
                 },
                 icon: '',
                 hasSubmenu: false
@@ -293,7 +293,7 @@ export default [{
                 title: 'Очная форма обучения',
                 path: {
                     name: 'sveden',
-                    params: 'abitur_ofo' /* bbb - */
+                    params: 'ofo' /* bbb - */
                 },
                 icon: '',
                 hasSubmenu: false
@@ -302,7 +302,7 @@ export default [{
                 title: 'Заочная форма обучения',
                 path: {
                     name: 'sveden',
-                    params: 'abitur_zfo' /* bbb - */
+                    params: 'zfo' /* bbb - */
                 },
                 icon: '',
                 hasSubmenu: false
