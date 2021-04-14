@@ -73,6 +73,18 @@ export default {
         { name: 'Демченко Лариса Юрьевна', photo: 'http://skf-mtusi.ru/images/ruk/Osipovich.jpg', position: 'Главный бухгалтер', phone: '(863) 262-29-25', workPhone: false, email: 'buhgаlteria@skf-mtusi.ru' }
       ]
     }
+  },
+  head() {
+    return {
+      title: 'Руководство',
+      meta: [
+        {
+          hid: 'rulers',
+          name: 'Руководство',
+          content: 'Руководство'
+        }
+      ]
+    }
   }
 }
 </script>

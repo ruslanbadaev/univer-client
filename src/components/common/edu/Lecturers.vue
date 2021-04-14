@@ -183,6 +183,18 @@ export default {
     allLecturers () {
       return this.$store.getters[this.$route.query.chair]
     }
+  },
+  head() {
+    return {
+      title: 'Преподаватели',
+      meta: [
+        {
+          hid: 'lecturers',
+          name: 'Преподаватели',
+          content: 'Преподаватели'
+        }
+      ]
+    }
   }
 }
 </script>

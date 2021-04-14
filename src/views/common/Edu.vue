@@ -90,6 +90,7 @@ export default {
     docs: () => import('@/components/common/edu/Docs'),
     rulers: () => import('@/components/common/edu/structure_SKF/Rulers'),
     standarts: () => import('@/components/common/edu/Standarts'),
+    userinfo: () => import('@/components/common/edu/UserInfo'),
     rooms: () => import('@/components/common/edu/Rooms'),
     library: () => import('@/components/common/edu/Library'),
     grants: () => import('@/components/common/edu/Grants'),

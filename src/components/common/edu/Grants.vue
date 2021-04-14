@@ -120,6 +120,18 @@ export default {
         { name: 'Информация о наличии общежития, интерната', link: 'http://www.skf-mtusi.ru/files/info/stip/internat.pdf' }
       ]
     }
+  },
+  head() {
+    return {
+      title: 'Категории для назначения социальной стипендии',
+      meta: [
+        {
+          hid: 'grants',
+          name: 'Категории для назначения социальной стипендии',
+          content: 'Категории для назначения социальной стипендии'
+        }
+      ]
+    }
   }
 }
 </script>

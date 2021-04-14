@@ -77,6 +77,18 @@ export default {
         { icon: '', name: 'каб.309/311, 3 этаж' }
       ]
     }
+  },
+  head() {
+    return {
+      title: 'Библиотека',
+      meta: [
+        {
+          hid: 'library',
+          name: 'Библиотека',
+          content: 'Библиотека СКФ МТУСИ'
+        }
+      ]
+    }
   }
 }
 </script>

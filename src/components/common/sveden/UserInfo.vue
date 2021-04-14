@@ -31,7 +31,7 @@
 
 <script>
 export default {
-  name: 'standarts',
+  name: 'userinfo',
   data () {
     return {
       standarts: [
@@ -39,18 +39,6 @@ export default {
         { name: 'ФГОС-3++ Информатика и вычислительная техника', code: '09.03.01', link: 'http://www.skf-mtusi.ru/files/info/fgosvo/2017_09_03_01_N_929.pdf' },
         { name: 'Инфокоммуникационные технологии и системы связи', code: '11.03.02', link: 'http://www.skf-mtusi.ru/files/info/fgosvo/110302.pdf' },
         { name: 'ФГОС-3++ Инфокоммуникационные технологии и системы связи', code: '11.03.02', link: 'http://www.skf-mtusi.ru/files/info/fgosvo/2017_11_03_02_N_930.pdf' }
-      ]
-    }
-  },
-  head() {
-    return {
-      title: 'Научные стандарты',
-      meta: [
-        {
-          hid: 'standarts',
-          name: 'Научные стандарты',
-          content: 'Научные стандарты СКФ МТУСИ'
-        }
       ]
     }
   }

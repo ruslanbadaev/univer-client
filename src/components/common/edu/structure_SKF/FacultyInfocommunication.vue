@@ -179,6 +179,18 @@ export default {
         image: 'https://static10.tgstat.ru/channels/_0/2d/2da6c1a6824ad9f0bdb16cf5027a2d78.jpg'
       }]
     }
+  },
+  head() {
+    return {
+      title: 'Инфокоммуникационные технологии и системы связи',
+      meta: [
+        {
+          hid: 'ITaSS',
+          name: 'Инфокоммуникационные технологии и системы связи',
+          content: 'Инфокоммуникационные технологии и системы связи'
+        }
+      ]
+    }
   }
 }
 </script>

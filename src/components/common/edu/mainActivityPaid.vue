@@ -70,6 +70,18 @@ export default {
         { link: 'http://www.skf-mtusi.ru/?page_id=571', name: 'Подготовительные курсы' }
       ]
     }
+  },
+  head() {
+    return {
+      title: 'Образовательная деятельность',
+      meta: [
+        {
+          hid: 'main-activity-paid',
+          name: 'Образовательная деятельность',
+          content: 'Образовательная деятельность СКФ МТУСИ'
+        }
+      ]
+    }
   }
 }
 </script>

@@ -54,6 +54,19 @@ export default {
         'http://www.skf-mtusi.ru/images/kaf/onp4_1.jpg'
       ]
     }
+  },
+  head() {
+    return {
+      title: 'Общенаучная подготовка',
+      meta: [
+        {
+          hid: 'science',
+          name: 'Общенаучная подготовка',
+          content: 'Общенаучная подготовка'
+        }
+      ]
+    }
   }
+
 }
 </script>
