@@ -6,8 +6,8 @@
           <v-card>
             Ваша должность:
             <v-select
-              v-model="select"
-              :items="items"
+              v-model="role"
+              :items="roles"
               label="Сделайте выбор из списка"
               menu-props="auto"
               hide-details
@@ -15,12 +15,12 @@
               single-line
             ></v-select>
 
-            <div v-if="select === 'Студент'">
-            <br>
+            <div v-if="role === 'Студент'">
+              <br />
               Ваша группа:
               <v-select
-                v-model="select"
-                :items="items"
+                v-model="group"
+                :items="groups"
                 label="Сделайте выбор из списка"
                 menu-props="auto"
                 hide-details
@@ -36,23 +36,35 @@
 </template>
 
 <script>
+import axios from "axios";
 export default {
   name: "userinfo",
+
   data() {
     return {
-      select: "",
-      items: ["Студент", "Преподаватель", "Персонал", "Администратор"],
+      role: "",
+      roles: ["Студент", "Преподаватель", "Персонал", "Администратор"],
+      groups: [],
+      group: "",
     };
   },
   methods: {
-    getGroups() {},
+    getGroups() {
+      axios
+        .get(
+          `${process.env.VUE_APP_SERVER}/groups/all`
+        )
+        .then(
+          (response) =>
+            (this.groups = response.data.result)
+        );
+    },
   },
 };
 </script>
 
 <style lang="css">
 .v-card {
- padding: 15px;
+  padding: 15px;
 }
-
 </style>
