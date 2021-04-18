@@ -4,31 +4,55 @@
       <v-row>
         <v-col cols="12">
           <v-card>
-            Ваша должность:
-            <v-select
-              v-model="role"
-              @change="checkRoleSelect()"
-              :items="roles"
-              label="Сделайте выбор из списка"
-              menu-props="auto"
-              hide-details
-              prepend-icon="mdi-map"
-              single-line
-            ></v-select>
-
-            <div v-if="role === 'Студент'">
-              <br />
-              Ваша группа:
+            <v-subheader>Информация профиля</v-subheader>
+            <v-form ref="form" v-model="valid" lazy-validation>
+             
               <v-select
-                v-model="group"
-                :items="groups"
-                label="Сделайте выбор из списка"
-                item-text="name"
-                item-value="_id"
-                prepend-icon="mdi-map"
-                return-object
+                v-model="role"
+                @change="checkRoleSelect()"
+                :items="roles"
+                label="Ваша должность:"
+
+                required
+
               ></v-select>
-            </div>
+              <div v-if="role === 'Студент'">
+                <br />
+               
+                <v-select
+                  v-model="group"
+                  :items="groups"
+                  label="Ваша группа:"
+                  item-text="name"
+                  item-value="_id"
+                  return-object
+                  required
+                ></v-select>
+              </div>
+              <v-text-field
+                v-model="phone"
+                :rules="phoneRules"
+                label="Номер телефона"
+                prefix="+7"
+              ></v-text-field>
+
+              <v-btn
+                :disabled="!valid"
+                color="success"
+                class="mr-4"
+                @click="validate"
+              >
+                Validate
+              </v-btn>
+
+              <v-btn color="error" class="mr-4" @click="reset">
+                Reset Form
+              </v-btn>
+
+              <v-btn color="warning" @click="resetValidation">
+                Reset Validation
+              </v-btn>
+            </v-form>
           </v-card>
         </v-col>
       </v-row>
@@ -47,9 +71,24 @@ export default {
       roles: ["Студент", "Преподаватель", "Персонал", "Администратор"],
       groups: [],
       group: "",
+      phone: "",
+      phoneRules: [
+        (v) => !!v || "Введите номер телефона",
+        (v) => /^\+?[0-9]{3}-?[0-9]{6,12}$/.test(v) || "Номер телефона не соответствует маске",
+      ],
     };
   },
   methods: {
+/*     	acceptNumber() {
+    	var x = this.value.replace(/\D/g, '').match(/(\d{0,3})(\d{0,3})(\d{0,4})/);
+  this.value = !x[2] ? x[1] : '(' + x[1] + ') ' + x[2] + (x[3] ? '-' + x[3] : '');
+    }, */
+    validate() {
+      this.$refs.form.validate();
+    },
+    reset() {
+      this.$refs.form.reset();
+    },
     getGroups() {
       console.log("1");
       axios.get(`${process.env.VUE_APP_SERVER}/groups/all`).then((response) => {
