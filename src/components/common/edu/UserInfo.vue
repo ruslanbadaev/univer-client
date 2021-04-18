@@ -7,6 +7,7 @@
             Ваша должность:
             <v-select
               v-model="role"
+              @change="checkRoleSelect()"
               :items="roles"
               label="Сделайте выбор из списка"
               menu-props="auto"
@@ -22,10 +23,10 @@
                 v-model="group"
                 :items="groups"
                 label="Сделайте выбор из списка"
-                menu-props="auto"
-                hide-details
+                item-text="name"
+                item-value="_id"
                 prepend-icon="mdi-map"
-                single-line
+                return-object
               ></v-select>
             </div>
           </v-card>
@@ -50,14 +51,21 @@ export default {
   },
   methods: {
     getGroups() {
-      axios
-        .get(
-          `${process.env.VUE_APP_SERVER}/groups/all`
-        )
-        .then(
-          (response) =>
-            (this.groups = response.data.result)
-        );
+      console.log("1");
+      axios.get(`${process.env.VUE_APP_SERVER}/groups/all`).then((response) => {
+        console.log(response.data);
+        this.groups = response.data.result;
+      });
+    },
+    checkRoleSelect() {
+      switch (this.role) {
+        case "Студент":
+          this.getGroups();
+          break;
+
+        default:
+          break;
+      }
     },
   },
 };
