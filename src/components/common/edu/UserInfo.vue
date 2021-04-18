@@ -6,22 +6,21 @@
           <v-card>
             <v-subheader>Информация профиля</v-subheader>
             <v-form ref="form" v-model="valid" lazy-validation>
-             
               <v-select
                 v-model="role"
                 @change="checkRoleSelect()"
                 :items="roles"
+                :rules="roleRules"
                 label="Ваша должность:"
-
                 required
-
               ></v-select>
               <div v-if="role === 'Студент'">
                 <br />
-               
+
                 <v-select
                   v-model="group"
                   :items="groups"
+                  :rules="groupRules"
                   label="Ваша группа:"
                   item-text="name"
                   item-value="_id"
@@ -48,10 +47,6 @@
               <v-btn color="error" class="mr-4" @click="reset">
                 Reset Form
               </v-btn>
-
-              <v-btn color="warning" @click="resetValidation">
-                Reset Validation
-              </v-btn>
             </v-form>
           </v-card>
         </v-col>
@@ -72,14 +67,19 @@ export default {
       groups: [],
       group: "",
       phone: "",
+      valid: false,
       phoneRules: [
         (v) => !!v || "Введите номер телефона",
-        (v) => /^\+?[0-9]{3}-?[0-9]{6,12}$/.test(v) || "Номер телефона не соответствует маске",
+        (v) =>
+          /^\+?[0-9]{3}-?[0-9]{6,12}$/.test(v) ||
+          "Номер телефона не соответствует маске",
       ],
+      roleRules: [(v) => !!v || "Укажите свою должность"],
+      groupRules: [(v) => !!v || "Укажите свою группу"],
     };
   },
   methods: {
-/*     	acceptNumber() {
+    /*     	acceptNumber() {
     	var x = this.value.replace(/\D/g, '').match(/(\d{0,3})(\d{0,3})(\d{0,4})/);
   this.value = !x[2] ? x[1] : '(' + x[1] + ') ' + x[2] + (x[3] ? '-' + x[3] : '');
     }, */

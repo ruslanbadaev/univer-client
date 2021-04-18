@@ -24,6 +24,9 @@
     <v-btn icon @click="$setSystemMessage('Данная функция появится в ближайшем времени')">
       <v-icon>mdi-cog-outline</v-icon>
     </v-btn>
+    <v-btn icon link :to="{ path: `/sveden/userinfo`}">
+      <v-icon>mdi-account-cog</v-icon>
+    </v-btn>
     <v-menu v-if="user === null && !$vuetify.breakpoint.mobile" left bottom>
       <template v-slot:activator="{ on }">
         <v-btn icon v-on="on">
