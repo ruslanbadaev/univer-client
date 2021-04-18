@@ -41,11 +41,11 @@
                 class="mr-4"
                 @click="validate"
               >
-                Validate
+                Отправить
               </v-btn>
 
               <v-btn color="error" class="mr-4" @click="reset">
-                Reset Form
+                Сббросить
               </v-btn>
             </v-form>
           </v-card>
@@ -57,6 +57,7 @@
 
 <script>
 import axios from "axios";
+//axios.defaults.headers.common["Authorization"] = "Bearer" + this.$store.getters.user.token;
 export default {
   name: "userinfo",
 
@@ -79,22 +80,111 @@ export default {
     };
   },
   methods: {
-    /*     	acceptNumber() {
-    	var x = this.value.replace(/\D/g, '').match(/(\d{0,3})(\d{0,3})(\d{0,4})/);
-  this.value = !x[2] ? x[1] : '(' + x[1] + ') ' + x[2] + (x[3] ? '-' + x[3] : '');
-    }, */
+    translateRoleToRu() {
+      return {
+        student: "Студент",
+        lecturer: "Преподаватель",
+        staff: "Персонал",
+        admin: "Администратор",
+      };
+    },
+    translateRoleToEn() {
+      return {
+        Студент: "student",
+        Преподаватель: "lecturer",
+        Персонал: "staff",
+        Администратор: "admin",
+      };
+    },
     validate() {
       this.$refs.form.validate();
+      if (this.group !== "") this.setGroup();
+      if (this.phone !== "") this.setPhone();
+      if (this.role !== "") this.setRole();
     },
     reset() {
+      console.log(this.$store.getters.user);
       this.$refs.form.reset();
     },
     getGroups() {
-      console.log("1");
-      axios.get(`${process.env.VUE_APP_SERVER}/groups/all`).then((response) => {
-        console.log(response.data);
-        this.groups = response.data.result;
-      });
+      axios
+        .get(`${process.env.VUE_APP_SERVER}/groups/all`)
+        .then((response) => {
+          this.groups = response.data.result;
+        })
+        .catch((error) => alert(error));
+    },
+    getUserData() {
+      axios.defaults.headers.common["Authorization"] =
+        "Bearer " + this.$store.getters.user.token;
+      axios
+        .get(`${process.env.VUE_APP_SERVER}/profile`)
+        .then((response) => {
+          console.log(response.data);
+          if (response.data.result.role === "student") {
+            this.getGroups();
+          }
+
+          this.role = !!response.data.result.role
+            ? this.translateRoleToRu()[response.data.result.role]
+            : "";
+          this.group = !!response.data.result.group_id
+            ? response.data.result.group_id
+            : "";
+          this.phone = !!response.data.result.phone
+            ? response.data.result.phone
+            : "";
+          console.log(this.group);
+        })
+        .catch((error) => alert(error));
+    },
+    setGroup() {
+      axios
+        .patch(
+          `${process.env.VUE_APP_SERVER}/users/${this.$store.getters.user._id}/group`,
+          { group_id: this.group },
+          {
+            headers: {
+              Authorization: `Bearer ${this.$store.getters.user.token}`,
+            },
+          }
+        )
+        .then((response) => {
+          console.log(response.data);
+        })
+        .catch((error) => alert(error));
+    },
+    setPhone() {
+      axios
+        .patch(
+          `${process.env.VUE_APP_SERVER}/users/${this.$store.getters.user._id}/phone`,
+          { phone: this.phone },
+          {
+            headers: {
+              Authorization: `Bearer ${this.$store.getters.user.token}`,
+            },
+          }
+        )
+        .then((response) => {
+          this.groups = response.data.result;
+        })
+        .catch((error) => alert(error));
+    },
+    setRole() {
+      axios
+        .patch(
+          `${process.env.VUE_APP_SERVER}/users/${this.$store.getters.user._id}/role`,
+          { group_id: this.translateRoleToEn()[this.role] },
+          {
+            headers: {
+              Authorization: `Bearer ${this.$store.getters.user.token}`,
+            },
+          }
+        )
+        .then((response) => {
+          this.groups = response.data.result;
+        })
+        .catch((error) => alert(error));
     },
     checkRoleSelect() {
       switch (this.role) {
@@ -106,6 +196,9 @@ export default {
           break;
       }
     },
+  },
+  mounted() {
+    this.getUserData();
   },
 };
 </script>

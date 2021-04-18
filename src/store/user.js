@@ -9,7 +9,7 @@ class User {
     this.email = email
     this.name = name
     this.role = role
-    this.id = _id
+    this._id = _id
     this.verified = verified
     this.verification = verification
     this.refresh_token = refresh_token
